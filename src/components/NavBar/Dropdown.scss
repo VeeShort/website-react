@@ -1,0 +1,91 @@
+.subMenu_1 {
+  top: 5em;
+  list-style: none;
+  text-align: center;
+  position: absolute;
+  border-radius: 5px;
+  padding: 15px 30px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.3s 0.2s;
+  a {
+    color: #999;
+    text-decoration: none;
+    padding-bottom: 10px;
+    padding-right: 50px;
+  }
+}
+.subMenu_1 li {
+  font-family: "Work Sans", sans-serif;
+  list-style: none;
+  padding: 8px;
+  font-size: 13px;
+}
+
+.subMenu_2 {
+  position: absolute;
+  top: 60%;
+  left: 100%;
+  text-align: center;
+  text-decoration: none;
+  visibility: hidden;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 20px 30px;
+  background: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.3s 0.2s;
+}
+
+.subMenu_3 {
+  position: absolute;
+  top: 60%;
+  left: 100%;
+  text-decoration: none;
+  text-align: center;
+  visibility: hidden;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 20px 30px;
+  background: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.3s 0.2s;
+}
+
+.active-link_1:hover {
+  .subMenu_2 {
+    visibility: visible;
+  }
+}
+
+.active-link_2:hover {
+  .subMenu_3 {
+    visibility: visible;
+  }
+}
+
+.ion-chevron-right {
+  display: inline-block;
+  position: absolute;
+  right: 15px;
+  padding: 5px;
+  font-size: 8px;
+}
+
+@media screen and (max-width: 960px) {
+  .mobileNav {
+    position: relative;
+  } 
+  .subMenu_1 {
+    position: absolute;
+    height: auto;
+    top: 100%;
+    left: -1em;
+    width: 100%;
+    text-align: left;
+    padding-right: 3em;
+    outline: 1px black solid;
+  }
+  .ion-chevron-down {
+    float: right;
+  }
+}
