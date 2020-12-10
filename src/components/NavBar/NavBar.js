@@ -19,10 +19,7 @@ export const NavBar = () => {
   };
 
   const changeState = () => {
-    if(window.innerWidth < 960) {
-      setDropdown(true)
-      console.log('mobiile');
-    }
+    setDropdown(true)
   }
 
   const onMouseLeave = () => {
@@ -63,7 +60,7 @@ export const NavBar = () => {
                 to="/service"
                 className="nav-links"
               >
-                SERVICES <span><i className="ion-chevron-down"></i></span>
+                SERVICES <span><i className={ dropdown ? 'ion-chevron-up' : 'ion-chevron-down'}></i></span>
               </Link>
               {dropdown && <Dropdown />}
             </li>
