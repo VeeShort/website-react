@@ -19,7 +19,7 @@ export const NavBar = () => {
   };
 
   const changeState = () => {
-    setDropdown(true)
+    setDropdown(!dropdown)
   }
 
   const onMouseLeave = () => {
@@ -54,14 +54,14 @@ export const NavBar = () => {
               className={`nav-item ${setDropdown ? 'mobileNav' : "" }`}
               onMouseEnter={onMouseEnter}
               onMouseLeave={onMouseLeave}
-              onClick={changeState}
             >
               <Link
                 to="/service"
                 className="nav-links"
               >
-                SERVICES <span><i className={ dropdown ? 'ion-chevron-up' : 'ion-chevron-down'}></i></span>
+                SERVICES 
               </Link>
+              <span onClick={changeState} ><i className={ dropdown ? 'ion-chevron-up' : 'ion-chevron-down'}></i></span>
               {dropdown && <Dropdown />}
             </li>
             <li className="nav-item" onClick={closeMobileMenu}>

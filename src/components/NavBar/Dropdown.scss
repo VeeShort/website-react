@@ -125,22 +125,16 @@
       box-shadow: none;
     }
   }
-  .active-link_1:hover {
-    .subMenu_2 {
-      display: block;
-    }
-  }
+}
 
-  .active-link_2:hover {
-    .subMenu_3 {
-      display: block;
-      padding-bottom: 0;
-    }
+.showSubMenu {
+  .subMenu_2   {
+    display: block;
   }
 }
 
-.disabled-link_2 {
+.showSubSubMenu {
   .subMenu_3 {
-    display: none;
+    display: block;
   }
 }
