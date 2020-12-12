@@ -1,5 +1,5 @@
 .subMenu_1 {
-  top: 3em;
+  top: 6em;
   list-style: none;
   text-align: center;
   position: absolute;
@@ -62,79 +62,20 @@
   }
 }
 
-.ion-chevron-down ,
-.ion-chevron-up ,
+.ion-chevron-down,
+.ion-chevron-up {
+  padding-left: 2px;
+  font-size: 8px;
+  color: #999;
+
+}
+
 .ion-chevron-right {
   display: inline-block;
   position: absolute;
   right: 15px;
   padding: 5px;
   font-size: 8px;
+  color: #999;
 }
 
-
-@media screen and (max-width: 960px) {
-  * {
-    font-size: 14px;
-  }
-  .mobileNav {
-    position: relative;
-  }
-  .ion-chevron-down {
-    float: right;
-  }
-  .ion-chevron-up {
-    float: right;
-  }
-  .subMenu_1 {
-    position: static;
-    padding: 5px 15px;
-    height: auto;
-    top: 100%;
-    left: -1em;
-    width: 100%;
-    text-align: left;
-    padding-right: 3em;
-    box-shadow: none;
-    a {
-      color: #fff;
-    }
-  }
-
-  .subMenu_2 {
-    background: #595959;
-    display: none;
-    position: static;
-    padding: 5px 15px;
-    height: auto;
-    left: -1em;
-    width: 100%;
-    text-align: left;
-    padding-right: 3em;
-    box-shadow: none;
-    .subMenu_3 {
-      background: #595959;
-      display: none;
-      padding: 5px 15px;
-      position: static;
-      height: auto;
-      left: -1em;
-      width: 100%;
-      text-align: left;
-      padding-right: 3em;
-      box-shadow: none;
-    }
-  }
-}
-
-.showSubMenu {
-  .subMenu_2   {
-    display: block;
-  }
-}
-
-.showSubSubMenu {
-  .subMenu_3 {
-    display: block;
-  }
-}
