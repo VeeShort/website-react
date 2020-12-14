@@ -1,0 +1,21 @@
+{
+  "plugins": ["jest"],
+  "env": {
+    "jest/globals": true
+  },
+  "extends": ["standard", "standard-jsx"],
+  "rules": {
+    // basic jsx/js
+    "no-console": "error",
+    "semi": ["error", "always"],
+    "jsx-quotes": ["error", "prefer-double"],
+    "func-call-spacing": ["error", "never"],
+    "space-before-function-paren": ["error", "never"],
+    // jest unit tests
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error"
+  }
+}
