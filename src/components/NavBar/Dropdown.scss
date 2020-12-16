@@ -15,25 +15,24 @@ $font-color: #999;
   transition: all 0.3s 0.2s;
   &.main {
     top: 6em;
-    visibility: visible;
+    // visibility: visible;
     left: auto;
   }
   a {
     color: $font-color;
     text-decoration: none;
     padding-bottom: 10px;
-    padding-right: 50px;
   }
   li {
     font-family: "Work Sans", sans-serif;
     list-style: none;
-    padding: 8px;
+    padding: 8px 0;
     font-size: 13px;
+    min-width: 80px;
   }
 }
 
-#first-link:hover,
-#second-link:hover {
+.option:hover {
   & > .sub-menu {
     visibility: visible;
   }

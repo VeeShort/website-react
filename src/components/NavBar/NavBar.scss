@@ -60,6 +60,16 @@ $font-color: #999;
   display: none;
 }
 
+.nav-item:hover {
+  .ion-chevron-up {
+    transition: all .3s;
+    transform: rotate(180deg);
+  }
+  .sub-menu.main {
+    visibility: visible;
+  }
+}
+
 @media screen and (max-width: 960px) {
   .container {
     width: 100%;
