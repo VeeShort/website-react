@@ -16,7 +16,7 @@ function Dropdown() {
   };
 
   return (
-    <ul className="sub-menu">
+    <ul className="sub-menu main">
       <li>
         <a href="#">Service1</a>
       </li>

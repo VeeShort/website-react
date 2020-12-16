@@ -1,26 +1,22 @@
 $font-color: #999;
 
 .sub-menu {
-  top: 6em;
-  list-style: none;
-  text-align: center;
   position: absolute;
+  top: 60%;
+  left: 100%;
+  text-align: center;
+  text-decoration: none;
+  visibility: hidden;
   border-radius: 5px;
-  padding: 15px 30px;
+  font-size: 14px;
+  padding: 20px 30px;
+  background: #fff;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-  .sub-menu {
-    position: absolute;
-    top: 60%;
-    left: 100%;
-    text-align: center;
-    text-decoration: none;
-    visibility: hidden;
-    border-radius: 5px;
-    font-size: 14px;
-    padding: 20px 30px;
-    background: #fff;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-    transition: all 0.3s 0.2s;
+  transition: all 0.3s 0.2s;
+  &.main {
+    top: 6em;
+    visibility: visible;
+    left: auto;
   }
   a {
     color: $font-color;
@@ -28,25 +24,19 @@ $font-color: #999;
     padding-bottom: 10px;
     padding-right: 50px;
   }
-}
-.sub-menu li {
-  font-family: "Work Sans", sans-serif;
-  list-style: none;
-  padding: 8px;
-  font-size: 13px;
-}
-
-#first-link:hover {
-  .sub-menu {
-    visibility: visible;
-    .sub-menu {
-      visibility: hidden;
-    }
+  li {
+    font-family: "Work Sans", sans-serif;
+    list-style: none;
+    padding: 8px;
+    font-size: 13px;
   }
 }
 
-#second-link:hover .sub-menu:last-child {
-  visibility: visible;
+#first-link:hover,
+#second-link:hover {
+  & > .sub-menu {
+    visibility: visible;
+  }
 }
 
 .ion-chevron-down,

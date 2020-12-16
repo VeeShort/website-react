@@ -1,4 +1,5 @@
 $font-color-mobile: #fff;
+$font-color: #999;
 
 * {
   font-family: "Work Sans", sans-serif;
@@ -42,7 +43,7 @@ $font-color-mobile: #fff;
       margin-left: 15px;
       font-size: 12px;
       .nav-links {
-        color: #999;
+        color: $font-color;
         text-decoration: none;
         padding: 0.5rem 1rem;
       }
@@ -55,7 +56,7 @@ $font-color-mobile: #fff;
 
 .menu-icon {
   position: sticky;
-  color: #999;
+  color: $font-color;
   display: none;
 }
 
