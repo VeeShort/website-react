@@ -1,34 +1,23 @@
-import "./NavBar.scss";
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import Dropdown from "./Dropdown";
+import './NavBar.scss';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Dropdown from './Dropdown';
 
 export const NavBar = () => {
-  const [click, setClick] = useState(false);
-  const [dropdown, setDropdown] = useState(false);
+  const [isMenuActive, setMenuState] = useState(false);
+  const [isDropDownActive, setDropDownVisibility] = useState(false);
 
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
+  const toggleMobileMenu = () => setMenuState(!isMenuActive);
+  const closeMobileMenu = () => setMenuState(false);
 
   const onMouseEnter = () => {
-    if (window.innerWidth < 960) {
-      setDropdown(false);
-    } else {
-      setDropdown(true);
-    }
+    setDropDownVisibility(window.innerWidth >= 960);
   };
-
-  const changeState = () => {
-    setDropdown(!dropdown)
-  }
 
   const onMouseLeave = () => {
-    if (window.innerWidth < 960) {
-      setDropdown(false);
-    } else {
-      setDropdown(false);
-    }
+    setDropDownVisibility(false);
   };
+
   return (
     <div className="container">
       <div className="logo-container">
@@ -36,12 +25,12 @@ export const NavBar = () => {
       </div>
       <div className="nav-container">
         <nav className="navbar">
-          <div className="menu-icon" onClick={handleClick}>
-            <i className={click ? "ion-close" : "ion-android-menu"} />
+          <div className="menu-icon" onisMenuActive={toggleMobileMenu}>
+            <i className={isMenuActive ? 'ion-close' : 'ion-android-menu'} />
           </div>
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
+          <ul className={isMenuActive ? 'nav-menu active' : 'nav-menu'}>
             <li className="nav-item">
-              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+              <Link to="/" className="nav-links" onisMenuActive={closeMobileMenu}>
                 HOME
               </Link>
             </li>
@@ -51,30 +40,31 @@ export const NavBar = () => {
               </Link>
             </li>
             <li
-              className={`nav-item ${setDropdown ? 'mobileNav' : "" }`}
+              className={`nav-item ${setDropDownVisibility ? 'mobileNav' : ''}`}
               onMouseEnter={onMouseEnter}
               onMouseLeave={onMouseLeave}
             >
-              <Link
-                to="/service"
-                className="nav-links"
-              >
-                SERVICES 
+              <Link to="/service" className="nav-links">
+                SERVICES
               </Link>
-              <span onClick={changeState} ><i className={ dropdown ? 'ion-chevron-up' : 'ion-chevron-down'}></i></span>
-              {dropdown && <Dropdown />}
+              <span onisMenuActive={() => setDropDownVisibility(!isDropDownActive)}>
+                <i
+                  className={isDropDownActive ? 'ion-chevron-up' : 'ion-chevron-down'}
+                />
+              </span>
+              {isDropDownActive && <Dropdown />}
             </li>
-            <li className="nav-item" onClick={closeMobileMenu}>
+            <li className="nav-item" onisMenuActive={closeMobileMenu}>
               <Link to="/" className="nav-links">
                 GALLERY
               </Link>
             </li>
-            <li className="nav-item" onClick={closeMobileMenu}>
+            <li className="nav-item" onisMenuActive={closeMobileMenu}>
               <Link to="/" className="nav-links">
                 BLOG
               </Link>
             </li>
-            <li className="nav-item" onClick={closeMobileMenu}>
+            <li className="nav-item" onisMenuActive={closeMobileMenu}>
               <Link to="/" className="nav-links">
                 CONTACT
               </Link>

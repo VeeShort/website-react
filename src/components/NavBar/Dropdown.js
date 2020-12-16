@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import "./Dropdown.scss";
+import React, { useState } from 'react';
+import './Dropdown.scss';
 
 function Dropdown() {
   const [closeSub, setSubState] = useState(false);
@@ -8,47 +8,45 @@ function Dropdown() {
   const changeSubState = e => {
     e.preventDefault();
     setSubState(!closeSub);
-    console.log(closeSub);
   };
 
   const changeSubSubState = e => {
     e.preventDefault();
     setSubSubState(!closeSubSub);
-    console.log(closeSubSub);
   };
 
   return (
-    <ul className="subMenu_1">
+    <ul className="sub-menu">
       <li>
         <a href="#">Service1</a>
       </li>
       <li>
         <a href="#">Service2</a>
       </li>
-      <li className="active-link_1">
+      <li className="active-link" id="first-link">
         <a href="#">Service3</a>
         <span
           onClick={changeSubState}
-          className={closeSub ? "showSubMenu" : "closeSubMenu"}
+          className={closeSub ? 'showSubMenu' : 'closeSubMenu'}
         >
-          <i className="ion-chevron-right"></i>
+          <i className="ion-chevron-right" />
         </span>
-        <ul className="subMenu_2">
+        <ul className="sub-menu">
           <li>
             <a href="#">Service1</a>
           </li>
           <li>
             <a href="#">Service2</a>
           </li>
-          <li className="active-link_2">
+          <li className="active-link" id="second-link">
             <a href="#">Service3</a>
             <span
               onClick={changeSubSubState}
-              className={closeSubSub ? "showSubSubMenu" : "closeSubSubMenu"}
+              className={closeSubSub ? 'showSubSubMenu' : 'closeSubSubMenu'}
             >
-              <i className="ion-chevron-right"></i>
+              <i className="ion-chevron-right" />
             </span>
-            <ul className="subMenu_3">
+            <ul className="sub-menu">
               <li>
                 <a href="#">Service1</a>
               </li>

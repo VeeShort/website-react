@@ -1,4 +1,6 @@
-.subMenu_1 {
+$font-color: #999;
+
+.sub-menu {
   top: 6em;
   list-style: none;
   text-align: center;
@@ -6,68 +8,52 @@
   border-radius: 5px;
   padding: 15px 30px;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  .sub-menu {
+    position: absolute;
+    top: 60%;
+    left: 100%;
+    text-align: center;
+    text-decoration: none;
+    visibility: hidden;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.3s 0.2s;
+  }
   a {
-    color: #999;
+    color: $font-color;
     text-decoration: none;
     padding-bottom: 10px;
     padding-right: 50px;
   }
 }
-.subMenu_1 li {
+.sub-menu li {
   font-family: "Work Sans", sans-serif;
   list-style: none;
   padding: 8px;
   font-size: 13px;
 }
 
-.subMenu_2 {
-  position: absolute;
-  top: 60%;
-  left: 100%;
-  text-align: center;
-  text-decoration: none;
-  visibility: hidden;
-  border-radius: 5px;
-  font-size: 14px;
-  padding: 20px 30px;
-  background: #fff;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-  transition: all 0.3s 0.2s;
-}
-
-.subMenu_3 {
-  position: absolute;
-  top: 60%;
-  left: 100%;
-  text-decoration: none;
-  text-align: center;
-  visibility: hidden;
-  border-radius: 5px;
-  font-size: 14px;
-  padding: 20px 30px;
-  background: #fff;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-  transition: all 0.3s 0.2s;
-}
-
-.active-link_1:hover {
-  .subMenu_2 {
+#first-link:hover {
+  .sub-menu {
     visibility: visible;
+    .sub-menu {
+      visibility: hidden;
+    }
   }
 }
 
-.active-link_2:hover {
-  .subMenu_3 {
-    visibility: visible;
-  }
+#second-link:hover .sub-menu:last-child {
+  visibility: visible;
 }
 
 .ion-chevron-down,
 .ion-chevron-up {
   padding-left: 2px;
   font-size: 8px;
-  color: #999;
-
+  color: $font-color;
 }
 
 .ion-chevron-right {
@@ -76,6 +62,5 @@
   right: 15px;
   padding: 5px;
   font-size: 8px;
-  color: #999;
+  color: $font-color;
 }
-

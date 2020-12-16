@@ -1,3 +1,5 @@
+$font-color-mobile: #fff;
+
 * {
   font-family: "Work Sans", sans-serif;
 }
@@ -72,7 +74,7 @@
     }
 
     .navbar-logo {
-      color: #fff;
+      color: $font-color-mobile;
     }
     .nav-menu {
       visibility: hidden;
@@ -92,7 +94,7 @@
       overflow: auto;
       background: #595959;
       font-family: "Work Sans";
-      color: #fff;
+      color: $font-color-mobile;
       left: 0;
       padding: 15px 0;
       top: 70px;
@@ -105,12 +107,12 @@
       .nav-links {
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         text-align: left;
-        color: #fff;
+        color: $font-color-mobile;
         width: 100%;
       }
     }
     .menu-icon {
-      color: #fff;
+      color: $font-color-mobile;
       display: block;
       position: absolute;
       top: 0;
