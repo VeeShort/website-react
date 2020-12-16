@@ -45,7 +45,7 @@ export const NavBar = () => {
               onMouseLeave={onMouseLeave}
             >
               <Link to="/service" className="nav-links">
-                SERVICES
+                SERVICE
               </Link>
               <span onisMenuActive={() => setDropDownVisibility(!isDropDownActive)}>
                 <i
