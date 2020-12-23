@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+
+.content-container {
+  max-width: 1140px;
+  min-height: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  .content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .heading {
+      font-family: "Work Sans", sans-serif;
+      font-size: 50px;
+      font-weight: 400;
+      margin: 0 0 16px;
+      line-height: 1.5;
+    }
+    .par-content {
+      font-size: 18px;
+      font-weight: 300;
+      margin: 0 0 50px;
+      line-height: 1.8;
+    }
+    .download-link {
+      text-decoration: none;
+      width: 25%;
+      background: #0389ff;
+      color: #fff;
+      font-size: 14px;
+      padding: 20px 24px;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+  .btn-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    .play-link {
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      border: 2px solid #ccc;
+    }
+    #playIco {
+      margin-left: 7px;
+      display: flex;
+      justify-content: center;
+      padding-top: 10px;
+      color: black;
+      font-size: 50px;
+    }
+  }
+}
+
+.play-link:hover {
+  transform: scale(1.1, 1.1);
+  transition-duration: 0.3s;
+}
+
+.download-link:hover {
+  opacity: 0.8;
+  // transition-100ration: 0.2s;
+}
+
+@media screen and (max-width: 960px) {
+  .content-container {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 15px;
+    width: 90%;
+  }
+}

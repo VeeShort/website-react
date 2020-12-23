@@ -1,8 +1,11 @@
 import './App.scss';
+import HeadingContent from './components/Heading/HeadingContent';
 
 function App() {
   return (
-    <div className="App" />
+    <div className="App">
+      <HeadingContent />
+    </div>
   );
 }
 
