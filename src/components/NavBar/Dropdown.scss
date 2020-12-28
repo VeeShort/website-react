@@ -1,4 +1,4 @@
-$font-color: #999;
+@import './variables.scss';
 
 .sub-menu {
   position: absolute;
@@ -32,10 +32,9 @@ $font-color: #999;
   }
 }
 
-#first-link:hover,
-#second-link:hover {
+.active-link:hover {
   & > .sub-menu {
-    visibility: visible;
+      visibility: visible;
   }
 }
 

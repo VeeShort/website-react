@@ -10,14 +10,6 @@ export const NavBar = () => {
   const toggleMobileMenu = () => setMenuState(!isMenuActive);
   const closeMobileMenu = () => setMenuState(false);
 
-  const onMouseEnter = () => {
-    setDropDownVisibility(window.innerWidth >= 960);
-  };
-
-  const onMouseLeave = () => {
-    setDropDownVisibility(false);
-  };
-
   return (
     <div className="container">
       <div className="logo-container">
@@ -25,12 +17,12 @@ export const NavBar = () => {
       </div>
       <div className="nav-container">
         <nav className="navbar">
-          <div className="menu-icon" onisMenuActive={toggleMobileMenu}>
+          <div className="menu-icon" onClick={toggleMobileMenu}>
             <i className={isMenuActive ? 'ion-close' : 'ion-android-menu'} />
           </div>
           <ul className={isMenuActive ? 'nav-menu active' : 'nav-menu'}>
             <li className="nav-item">
-              <Link to="/" className="nav-links" onisMenuActive={closeMobileMenu}>
+              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
                 HOME
               </Link>
             </li>
@@ -40,31 +32,31 @@ export const NavBar = () => {
               </Link>
             </li>
             <li
-              className={`nav-item ${setDropDownVisibility ? 'mobileNav' : ''}`}
-              onMouseEnter={onMouseEnter}
-              onMouseLeave={onMouseLeave}
+              className={`nav-item ${setDropDownVisibility ? 'nav-mobile' : ''}`}
+              onMouseEnter={(() => { setDropDownVisibility(window.innerWidth >= 960); })}
+              onMouseLeave={(() => { setDropDownVisibility(false); })}
             >
               <Link to="/service" className="nav-links">
                 SERVICE
               </Link>
-              <span onisMenuActive={() => setDropDownVisibility(!isDropDownActive)}>
+              <span onClick={() => setDropDownVisibility(!isDropDownActive)}>
                 <i
                   className={isDropDownActive ? 'ion-chevron-up' : 'ion-chevron-down'}
                 />
               </span>
               {isDropDownActive && <Dropdown />}
             </li>
-            <li className="nav-item" onisMenuActive={closeMobileMenu}>
+            <li className="nav-item" onClick={closeMobileMenu}>
               <Link to="/" className="nav-links">
                 GALLERY
               </Link>
             </li>
-            <li className="nav-item" onisMenuActive={closeMobileMenu}>
+            <li className="nav-item" onClick={closeMobileMenu}>
               <Link to="/" className="nav-links">
                 BLOG
               </Link>
             </li>
-            <li className="nav-item" onisMenuActive={closeMobileMenu}>
+            <li className="nav-item" onClick={closeMobileMenu}>
               <Link to="/" className="nav-links">
                 CONTACT
               </Link>

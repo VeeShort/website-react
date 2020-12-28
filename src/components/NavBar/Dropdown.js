@@ -1,18 +1,13 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './Dropdown.scss';
 
 function Dropdown() {
-  const [closeSub, setSubState] = useState(false);
-  const [closeSubSub, setSubSubState] = useState(false);
+  const statusList = [false, false];
+  const [dropdown, setDropdownVisiblity] = useState(statusList);
 
-  const changeSubState = e => {
-    e.preventDefault();
-    setSubState(!closeSub);
-  };
-
-  const changeSubSubState = e => {
-    e.preventDefault();
-    setSubSubState(!closeSubSub);
+  const clickHandler = (index) => {
+    statusList[index] = !statusList[index];
+    setDropdownVisiblity(statusList);
   };
 
   return (
@@ -23,11 +18,11 @@ function Dropdown() {
       <li>
         <a href="#">Service2</a>
       </li>
-      <li className="active-link" id="first-link">
+      <li className="active-link">
         <a href="#">Service3</a>
         <span
-          onClick={changeSubState}
-          className={closeSub ? 'showSubMenu' : 'closeSubMenu'}
+          onClick={() => clickHandler(0)}
+          className={dropdown[0] && 'active'}
         >
           <i className="ion-chevron-right" />
         </span>
@@ -38,11 +33,11 @@ function Dropdown() {
           <li>
             <a href="#">Service2</a>
           </li>
-          <li className="active-link" id="second-link">
+          <li className="active-link">
             <a href="#">Service3</a>
             <span
-              onClick={changeSubSubState}
-              className={closeSubSub ? 'showSubSubMenu' : 'closeSubSubMenu'}
+              onClick={() => clickHandler(1)}
+              className={dropdown[1] && 'active'}
             >
               <i className="ion-chevron-right" />
             </span>
