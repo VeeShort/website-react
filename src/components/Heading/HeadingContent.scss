@@ -71,7 +71,34 @@
   .content-container {
     display: flex;
     flex-direction: column-reverse;
+    align-items: center;
     padding: 0 15px;
-    background-color: #038900;
+    max-width: 100vh;
+    height: 100vh;
+    .btn-wrapper {
+      min-height: 40%;
+      min-width: 100%;
+      display: flex;
+      align-items: flex-end;
+      .play-link {
+        margin-bottom: 35px;
+      }
+    }
+    .content {
+      min-height: 60%;
+      min-width: 100%;
+      justify-content: start;
+      .heading {
+        font-size: 30px;
+      }
+      .par-content {
+        font-size: 18px;
+        font-family: "Work Sans", sans-serif;
+      }
+      .download-link {
+        padding: 16px 24px;
+        min-width: 165px;
+      }
+    }
   }
 }
