@@ -1,0 +1,46 @@
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  .video-modal {
+    min-height: 100vh;
+    min-width: 100vw;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  .video-player {
+    position: absolute;
+    top: 30px;
+  }
+  .close-video-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    outline: none;
+    border: none;
+    height: 45px;
+    width: 45px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #999;
+    background: rgba(30, 30, 30, 0.9);
+    padding: 10px;
+  }
+  .close-video-btn:hover {
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: 960px) {
+    .video-player {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      iframe {
+        width: 400px;
+        height: 350px;
+      }
+    }
+  }
