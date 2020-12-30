@@ -11,7 +11,13 @@
   }
   .video-player {
     position: absolute;
+    outline: 1px solid black;
     top: 30px;
+    // min-width: 100%;
+    iframe {
+      width: 100%;
+      height: 80vh;
+    }
   }
   .close-video-btn {
     position: absolute;
@@ -33,14 +39,17 @@
 }
 
 @media screen and (max-width: 960px) {
+  .video-wrapper {
+    width: 100%;
     .video-player {
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       iframe {
-        width: 400px;
-        height: 350px;
+        width: 80vw;
+        height: 50vh;
       }
     }
   }
+}

@@ -8,8 +8,6 @@ function VideoModal() {
       <div className="video-player">
         <iframe
           src="https://player.vimeo.com/video/93951774?color=f0d000&badge=0"
-          width="1200"
-          height="720"
           frameborder="0"
           allow="autoplay; fullscreen"
           allowfullscreen
