@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './HeadingContent.scss';
 
 function HeadingContent() {
   const [openVideo, setVideoState] = useState(false);
-  const changeVideoState = () => {
-    setVideoState(!openVideo);
-  };
+
   return (
     <div className="content-container">
       <div className="content">
@@ -15,7 +13,7 @@ function HeadingContent() {
       </div>
       <div className="btn-wrapper">
         <a href="#" className="play-link">
-          <span id="playIco" onClick={changeVideoState}>
+          <span id="playIco" onClick={() => setVideoState(!openVideo)}>
             <i className="ion-ios-play" />
           </span>
         </a>

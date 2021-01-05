@@ -78,7 +78,7 @@
     }
     .nav-menu {
       visibility: hidden;
-      position: absolute;
+      position: fixed;
       display: flex;
       flex-direction: column;
       width: 100%;
