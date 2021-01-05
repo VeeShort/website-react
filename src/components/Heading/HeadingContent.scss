@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+
+.content-container {
+  max-width: 1140px;
+  min-height: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  .content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .heading {
+      font-family: "Work Sans", sans-serif;
+      font-size: 50px;
+      font-weight: 400;
+      margin: 0 0 16px;
+      line-height: 1.5;
+    }
+    .par-content {
+      font-size: 18px;
+      font-weight: 300;
+      margin: 0 0 50px;
+      line-height: 1.8;
+    }
+    .download-link {
+      text-decoration: none;
+      width: 25%;
+      background: #0389ff;
+      color: #fff;
+      font-size: 14px;
+      padding: 20px 24px;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+  .btn-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    .play-link {
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      border: 2px solid #ccc;
+      cursor: pointer;
+    }
+    #playIco {
+      margin-left: 7px;
+      display: flex;
+      justify-content: center;
+      padding-top: 10px;
+      color: black;
+      font-size: 50px;
+    }
+  }
+}
+
+.play-link:hover {
+  transform: scale(1.1);
+  transition-duration: 0.3s;
+}
+
+.download-link:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 960px) {
+  .content-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 0 15px;
+    max-width: 100vh;
+    height: 100vh;
+    .btn-wrapper {
+      min-height: 40%;
+      min-width: 100%;
+      align-items: flex-end;
+      .play-link {
+        margin-bottom: 35px;
+      }
+    }
+    .content {
+      min-height: 60%;
+      min-width: 100%;
+      justify-content: start;
+      .heading {
+        font-size: 30px;
+      }
+      .par-content {
+        font-size: 18px;
+        font-family: "Work Sans", sans-serif;
+      }
+      .download-link {
+        padding: 16px 24px;
+        min-width: 165px;
+      }
+    }
+  }
+}

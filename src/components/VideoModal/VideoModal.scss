@@ -1,26 +1,19 @@
 .video-wrapper {
   display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
   justify-content: center;
-  .video-modal {
-    min-height: 100vh;
-    min-width: 100vw;
-    position: absolute;
-    top: 0;
-    z-index: 100;
-    background: rgba(0, 0, 0, 0.8);
-  }
-  .video-player {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    top: 30px;
+  min-height: 100vh;
+  min-width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  iframe {
     width: 100%;
-    height: 80%;
-    iframe {
-      z-index: 101;
-      width: 80vw;
-      height: 80vh;
-    }
+    max-width: 1140px;
+    min-height: 80%;
+    z-index: 101;
+    border: none;
+    outline: none;
   }
   .close-video-btn {
     position: absolute;
