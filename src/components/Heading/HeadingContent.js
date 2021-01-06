@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './HeadingContent.scss';
+import VideoModal from '../VideoModal/VideoModal';
 
 function HeadingContent() {
   const [openVideo, setVideoState] = useState(false);
@@ -12,12 +13,13 @@ function HeadingContent() {
         <a href="#" className="download-link">FREE DOWNLOAD</a>
       </div>
       <div className="btn-wrapper">
-        <a href="#" className="play-link">
-          <span id="playIco" onClick={() => setVideoState(!openVideo)}>
+        <div className="play-link" onClick={() => setVideoState(true)}>
+          <span id="playIco">
             <i className="ion-ios-play" />
           </span>
-        </a>
+        </div>
       </div>
+      {openVideo && <VideoModal open={setVideoState} />}
     </div>
   );
 };

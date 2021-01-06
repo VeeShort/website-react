@@ -4,6 +4,9 @@
   font-family: "Work Sans", sans-serif;
 }
 .container {
+  position: absolute;
+  left: 0;
+  right: 0;
   padding: 50px 0;
   display: flex;
   flex-direction: row;
@@ -18,7 +21,6 @@
 }
 .navbar-logo {
   color: black;
-  margin-left: 20px;
   cursor: pointer;
   text-decoration: none;
   font-size: 1.3rem;
@@ -42,6 +44,7 @@
       margin-left: 15px;
       font-size: 12px;
       .nav-links {
+        font-size: 13px;
         color: $font-color;
         text-decoration: none;
         padding: 0.5rem 1rem;
@@ -61,43 +64,40 @@
 
 @media screen and (max-width: 960px) {
   .container {
-    width: 100%;
+    width: 100vw;
     height: 70px;
     background: #0289ff;
     z-index: 25;
     padding: 0;
-
     .navbar .nav-menu .nav-item.nav-mobile {
       position: relative;
       flex-direction: column;
       height: auto;
     }
-
     .navbar-logo {
       color: $font-color-mobile;
+      margin-left: 20px;
     }
     .nav-menu {
       visibility: hidden;
       position: fixed;
       display: flex;
       flex-direction: column;
-      width: 100%;
       max-height: 50vh;
-      overflow: hidden;
       opacity: 1;
-      z-index: 5;
     }
     .nav-menu.active {
-      visibility: visible;
       overflow: auto;
       background: #595959;
       font-family: "Work Sans";
       color: $font-color-mobile;
       left: 0;
       padding: 15px 0;
+      width: 100%;  
       top: 70px;
       transition: all 0.5s;
       z-index: 1;
+      visibility: visible;
       .ion-chevron-down,
       .ion-chevron-up {
         display: none;
